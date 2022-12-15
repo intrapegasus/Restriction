@@ -1,87 +1,131 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>1020 | Access Denied</title>
+  <head>
+    <title>1020 | Access Denied</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-  <style type="text/css">
-    body {
-      padding: 30px 20px;
-      font-family: -apple-system, BlinkMacSystemFont,
-        "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-      color: #727272;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      margin: 0 0 40px;
-      font-size: 60px;
-      line-height: 1;
-      color: #252427;
-      font-weight: 700;
-    }
-
-    h2 {
-      margin: 100px 0 0;
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      color: #A299AC;
-      text-transform: uppercase;
-    }
-
-    p {
-      font-size: 16px;
-      margin: 1em 0;
-    }
-
-    .go-back a {
-      display: inline-block;
-      margin-top: 3em;
-      padding: 10px;
-      color: #1B1A1A;
-      font-weight: 700;
-      border: solid 2px #e7e7e7;
-      text-decoration: none;
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    .go-back a:hover {
-      border-color: #1B1A1A;
-    }
-
-    @media screen and (min-width: 768px) {
       body {
-        padding: 50px;
+        margin: 0;
+        padding: 0;
+        background: #1a094a;
+        font-family: "Roboto", sans-serif;
+        margin: 24px;
+        color: #ffffff;
       }
-    }
 
-    @media screen and (max-width: 480px) {
-      h1 {
-        font-size: 48px;
+      a:link {
+        color: inherit;
+        background-color: transparent;
+        text-decoration: underline;
       }
-    }
-  </style>
-</head>
-<body>
 
-<div class="container">
+      a:hover {
+        text-decoration: underline;
+      }
 
-  <h2>1020</h2>
-  <h1>Access Denied</h1>
+      .info {
+        min-height: 600px;
+        margin: 18vh auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
 
-  <p>This website is not available in your country</p>
+      .org-name {
+        margin: 20px 0 0 0;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+      }
 
-</div>
+      .title {
+        margin: 48px 0 0 0;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 46px;
+        line-height: 54px;
+      }
 
-</body>
+      .site {
+        margin: 24px 0 0 0;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      .subtitle {
+        max-width: 600px;
+        margin: 10px 0 0 0;
+        text-align: center;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        flex-grow: 1;
+      }
+      
+      .mt-6 {
+        margin: 24px 0 0 0;
+      }
+
+      .mt-3 {
+        margin: 12px 0 0 0;
+      }
+
+      .block-reason {
+        font-size: 16px;
+      }
+
+      .mailto-address {
+        font-size: 16px;
+      }
+
+      .radar {
+        font-size: 16px;
+      }
+
+      .request-info {
+        position: absolute;
+        bottom: 16px;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
+      }
+    </style>
+    <script>
+      const shouldShowDark = (backgroundColor) => {
+        const c = backgroundColor.match(/rgb\((\d{1,3}), (\d{1,3}), (\d{1,3})\)/);
+        return c[1] * 0.299 + c[2] * 0.587 + c[3] * 0.114 > 150
+      }
+
+      window.onload = function() {
+        document.body.style.color = shouldShowDark(window.getComputedStyle(document.body).backgroundColor) ? "#1e1e1e" : "#ffffff";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="info">
+      <img src="https:&#x2F;&#x2F;ia804602.us.archive.org&#x2F;21&#x2F;items&#x2F;tasyaidmedia&#x2F;TasyaIDMedia_1024x1024.png" width="146" height="146"></img>
+      <div class="org-name">Tasya ID Media</div>
+      <div class="title">Sovereign Internet</div>
+      <div class="site" id="domain">Site: basyiri.my.id</div>
+      <div class="subtitle">
+        <div class="footer-text">This site is not available in your country</div>
+        <div class="mt-6"></div>
+        <div class="block-reason">&#169; Azhar Basyiri H (European Union)</div>
+        <div class="mt-6"></div>
+      </div>
+    </div>
+  </body>
 </html>
+
